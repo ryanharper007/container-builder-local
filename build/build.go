@@ -864,7 +864,7 @@ func (b *Build) dockerRunArgs(stepDir string, idx int) []string {
 		// Make /builder/home $HOME.
 		"--env", "HOME="+homeDir,
 		// Connect to the network for metadata.
-		"--network", "cloudbuild",
+		//"--network", "cloudbuild",
 		// Run in privileged mode per discussion in b/31267381.
 		"--privileged",
 	)
