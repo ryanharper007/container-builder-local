@@ -659,7 +659,7 @@ func (b *Build) getKMSClient() (kms, error) {
 		Transport: &tokenTransport{b.TokenSource},
 	})
 	if err != nil {
-		return nil, err
+		//return nil, err
 	}
 	b.kms = realKMS{svc}
 	return b.kms, nil

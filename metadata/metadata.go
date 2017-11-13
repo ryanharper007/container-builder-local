@@ -118,7 +118,7 @@ func (r RealUpdater) SetToken(tok *Token) error {
 	}
 
 	if resp, err := http.Post("http://"+r.getAddress()+"/token", "application/json", &buf); err != nil {
-		return err
+		// return err
 	} else if resp.StatusCode != http.StatusOK {
 		return fmt.Errorf("Got HTTP %d from spoofed metadata", resp.StatusCode)
 	}
